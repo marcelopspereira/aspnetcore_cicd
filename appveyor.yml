@@ -21,9 +21,9 @@
     - cmd: dotnet restore
   test_script:
     - cmd: dotnet test aspnetcore_cicd/aspnetcore_cicd.Tests/aspnetcore_cicd.Tests.csproj  --configuration Release
-  after_build:
-    - cmd: dotnet pack aspnetcore_cicd/aspnetcore_cicd/aspnetcore_cicd.csproj --configuration Release
-     
+  #after_build:
+   # - cmd: dotnet pack aspnetcore_cicd/aspnetcore_cicd/aspnetcore_cicd.csproj --configuration Release
+
 # configuration for all branches starting from "dev-"
 # build in Debug mode and deploy locally for testing
 -
@@ -43,5 +43,5 @@
     - cmd: dotnet restore
   test_script:
     - cmd: dotnet test aspnetcore_cicd/aspnetcore_cicd.Tests/aspnetcore_cicd.Tests.csproj --configuration Debug
-  after_build:
-    - cmd: dotnet pack aspnetcore_cicd/aspnetcore_cicd/aspnetcore_cicd.csproj --configuration Release
+  #after_build:
+   # - cmd: dotnet pack aspnetcore_cicd/aspnetcore_cicd/aspnetcore_cicd.csproj --configuration Release
