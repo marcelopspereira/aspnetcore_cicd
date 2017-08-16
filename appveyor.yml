@@ -1,0 +1,43 @@
+# branches to build
+ 
+# configuration for "master" branch
+# build in Release mode and deploy to Azure
+-
+  branches:
+    only:
+      - master
+      - /release/.*/
+      - /hotfix/.*/
+      - /bugfix/.*/
+  image: Visual Studio 2015
+  environment:
+    DOTNET_CLI_TELEMETRY_OPTOUT: true
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  version: 1.0.{build}
+  configuration: Release
+  platform: Any CPU
+  skip_branch_with_pr: false
+  before_build:
+    - cmd: dotnet restore
+  test_script:
+    - cmd: dotnet test C:\Users\Marcelo\Documents\Dev\ASP_NET\aspnetcore_cicd\aspnetcore_cicd.Tests\aspnetcore_cicd.Tests.csproj  --configuration Release
+ 
+# configuration for all branches starting from "dev-"
+# build in Debug mode and deploy locally for testing
+-
+  branches:
+    only:
+      - develop
+      - /feature/.*/
+  image: Visual Studio 2015
+  environment:
+    DOTNET_CLI_TELEMETRY_OPTOUT: true
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  version: 1.0.{build}
+  configuration: Debug
+  platform: Any CPU
+  skip_branch_with_pr: false
+  before_build:
+    - cmd: dotnet restore
+  test_script:
+    - cmd: dotnet test C:\Users\Marcelo\Documents\Dev\ASP_NET\aspnetcore_cicd\aspnetcore_cicd.Tests\aspnetcore_cicd.Tests.csproj --configuration Debug
