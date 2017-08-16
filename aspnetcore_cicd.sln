@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnetcore_cicd", "aspnetcore_cicd\aspnetcore_cicd\aspnetcore_cicd.csproj", "{26FF8F49-D76B-44DD-A89A-28B448CDE2AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnetcore_cicd.Tests", "aaspnetcore_cicd\spnetcore_cicd.Tests\aspnetcore_cicd.Tests.csproj", "{249497A4-9468-4183-A6FA-78C0CAB06F69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnetcore_cicd.Tests", "aspnetcore_cicd\spnetcore_cicd.Tests\aspnetcore_cicd.Tests.csproj", "{249497A4-9468-4183-A6FA-78C0CAB06F69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
