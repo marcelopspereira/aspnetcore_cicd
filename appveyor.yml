@@ -20,7 +20,7 @@
   before_build:
     - cmd: dotnet restore
   test_script:
-    - cmd: dotnet test C:\projects\aspnetcore_cicd\aspnetcore_cicd\aspnetcore_cicd.Tests\aspnetcore_cicd.Tests.csproj  --configuration Release
+    - cmd: dotnet test C:\Users\Marcelo\Documents\Dev\ASP_NET\aspnetcore_cicd\aspnetcore_cicd\aspnetcore_cicd.Tests\aspnetcore_cicd.Tests.csproj  --configuration Release
  
 # configuration for all branches starting from "dev-"
 # build in Debug mode and deploy locally for testing
@@ -40,4 +40,4 @@
   before_build:
     - cmd: dotnet restore
   test_script:
-    - cmd: dotnet test C:\projects\aspnetcore_cicd\aspnetcore_cicd\aspnetcore_cicd.Tests\aspnetcore_cicd.Tests.csproj --configuration Debug
+    - cmd: dotnet test C:\Users\Marcelo\Documents\Dev\ASP_NET\aspnetcore_cicd\aspnetcore_cicd\aspnetcore_cicd.Tests\aspnetcore_cicd.Tests.csproj --configuration Debug
